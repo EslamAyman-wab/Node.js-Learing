@@ -1,0 +1,24 @@
+{
+  "name": "node.js-learing",
+  "version": "1.0.0",
+  "description": "This repository is my step-by-step path to learning Node.js from scratch and becoming a junior backend developer. I will start with the JavaScript and command-line basics I need, then learn how Node.js works, build HTTP servers and REST APIs, connect an application to a database, and finish by testing and deploying a complete backend. I will write and run code for every topic, keep my examples in this repository, and move on when I can explain the idea and build a small example without copying a tutorial.",
+  "homepage": "https://github.com/EslamAyman-wab/Node.js-Learing#readme",
+  "bugs": {
+    "url": "https://github.com/EslamAyman-wab/Node.js-Learing/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/EslamAyman-wab/Node.js-Learing.git"
+  },
+  "license": "ISC",
+  "author": "eslam ayman",
+  "type": "commonjs",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "nodemon chapter_01/ch_01/index.js"
+  },
+  "devDependencies": {
+    "nodemon": "^3.1.14"
+  }
+}
