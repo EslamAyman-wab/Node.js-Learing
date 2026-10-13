@@ -1,17 +1,28 @@
-const http = require('http');
-
 const express = require('express');
-// const routes = require('./routes');
-// console.log(routes.someText);
+
 const app = express();
-app.use((req,res,next)=>{
-    console.log('first test');
+
+app.use(express.urlencoded({ extended: false }));
+
+app.get('/',(req,res,next)=>{
+    res.send('<h1>this is the home page </h1>')
     next();
-});app.use((req,res,next)=>{
-    console.log('secand test');
-    // next();
+})
+
+app.get('/add-product', (req, res) => {
+  res.send(`
+    <form action="/product" method="POST">
+      <input type="text" name="title">
+      <button type="submit">Add Product</button>
+    </form>
+  `);
 });
 
-const server = http.createServer(app);
+app.post('/product', (req, res) => {
+  console.log(req.body.title);
 
-server.listen(3000);
+//   res.send('Product received!');
+res.redirect('/');
+});
+
+app.listen(3000);
